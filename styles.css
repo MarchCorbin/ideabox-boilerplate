@@ -28,7 +28,8 @@ body {
 
 
 .purple-4 {
-  background: #1F1F3D;;
+  background: #1F1F3D;
+
 }
 
 
@@ -271,6 +272,15 @@ border: none;
     margin-top: 5px;
   }
 
+  .menu-expand {
+    height: 149px;
+    text-align: center;
+    width: 100%;
+    background: #1F1F3D;
+    position: absolute;
+    z-index: 3;
+  }
+
   .menu {
     height: 40px;
     text-align: center;
@@ -280,15 +290,16 @@ border: none;
   .idea-form {
     flex-grow: 1;
   }
+
   .ham-section {
     color: white;
   }
-.left-side-alt {
-  border: none;
-opacity: 1;
-position: absolute;
-z-index: 3
-}
+  .left-side-alt {
+    border: none;
+    opacity: 1;
+    position: absolute;
+    z-index: 3
+  }
 .idea-card-text {
   height: 170px;
 }
@@ -302,10 +313,48 @@ z-index: 3
 .purple-3 {
 z-index: 1;
 background: #5356A4;
-opacity: 0.2;
+opacity: .1;
 width: 100%;
-height: 100%
+height: 100%;
+position: absolute;
 }
+
+.left-side-border {
+  border-top: none;
+}
+.left-side-border-expand {
+  border-top: none;
+  border-bottom: none;
+  padding: 2.43vh;
+  z-index: 3;
+  position: absolute;
+}
+
+.close-btn {
+  height: 50px;
+  width: 50px;
+
+}
+
+.ideas-btn {
+  background-color: #5356A4;
+  color: #e9e9f3;
+  border: #353567 solid 1px;
+  width: 344px;
+  font-size: 23px;
+  height: 47px;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  margin-left: 81px;
+  font-weight: 600;
+}
+
+.left-side-text-expand {
+  position: relative;
+  right: 59px;
+
+}
+
 
 /* .ideas { */
   /* opacity: 0; */
