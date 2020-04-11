@@ -6,19 +6,28 @@ var leftSideBorder = document.querySelector('.left-side-border');
 var hamHide = document.querySelector('.ham-hide');
 
 
-hamButton.addEventListener("click", expandLeftSide)
+hamButton.addEventListener("click", toggleButton)
+
+function toggleButton(){
+hamButton.classList.toggle('active')
+if (hamButton.classList.contains('active')){
+  expandLeftSide()
+} else {
+  retractLeftSide()
+  }
+}
 
 
-function expandLeftSide(event) {
-    if (event.target.src !== "Assets/menu-close.svg") {
+function expandLeftSide() {
         mainPage.classList.add("purple-3");
         leftSideBorder.classList.add("left-side-border-expand");
         leftSideText.classList.add("left-side-text-expand");
         menu.classList.add("menu-expand");
         menu.classList.remove("menu");
         hamHide.src = "Assets/menu-close.svg";
-    } else if (event.target.src === "Assets/menu-close.svg") {
-        console.log("hello");
+      }
+
+function retractLeftSide(){
         mainPage.classList.remove("purple-3");
         leftSideBorder.classList.remove("left-side-border-expand");
         leftSideText.classList.remove("left-side-text-expand");
@@ -26,7 +35,7 @@ function expandLeftSide(event) {
         menu.classList.add("menu");
         hamHide.src = "Assets/menu.svg";
     }
-}
+
 
 
 
