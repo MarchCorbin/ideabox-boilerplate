@@ -4,9 +4,21 @@ var menu = document.querySelector('.menu');
 var leftSideText = document.querySelector('.left-side-text');
 var leftSideBorder = document.querySelector('.left-side-border');
 var hamHide = document.querySelector('.ham-hide');
+var titleInput = document.querySelector('.title-input')
+var bodyInput = document.querySelector('.body-input')
+var saveButton = document.querySelector('.save-button')
+var ideaCards = document.querySelector('.idea-cards')
 
 
 hamButton.addEventListener("click", toggleButton)
+saveButton.addEventListener('click', function(){
+  saveToStorage()
+  displayCards()})
+titleInput.addEventListener('input', checkInputs)
+bodyInput.addEventListener('input', checkInputs)
+
+var savedIdeas = []
+document.onload = checkInputs()
 
 function toggleButton(){
 hamButton.classList.toggle('active')
@@ -16,7 +28,6 @@ if (hamButton.classList.contains('active')){
   retractLeftSide()
   }
 }
-
 
 function expandLeftSide() {
         mainPage.classList.add("purple-3");
@@ -38,8 +49,15 @@ function retractLeftSide(){
 
 
 
+    function checkInputs() {
+      if(titleInput.value === '' || bodyInput.value === ''){
+  saveButton.classList.add('disabled-button')
+  saveButton.classList.remove('save-button')
+  saveButton.disabled = true
+} else if (titleInput.value !== '' || bodyInput.value !== ''){
+  saveButton.classList.remove('disabled-button')
+  saveButton.classList.add('save-button')
+  saveButton.disabled = false
 
-
-// function() {
-
-// }
+}
+}
