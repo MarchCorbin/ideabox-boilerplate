@@ -85,7 +85,11 @@ font-size: 15px;
 }
 
 .idea-cards {
-  flex-grow: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 10px;
+  justify-items: center;
 }
 
 .title-input, .body-input, .save-button {
@@ -95,6 +99,25 @@ font-size: 15px;
   font-weight: bold;
   box-sizing: border-box;
 
+}
+
+.save-button {
+  background-color: #353567;
+  color:#E9E7F3;
+  margin-top: 3.04vh;
+  margin-bottom: 3.04vh;
+  height: 6.09vh;
+  font-size: 24px;
+  width: 370px;
+}
+
+.disabled-button {
+  background-color: lightslategray;
+  margin-top: 3.04vh;
+  margin-bottom: 3.04vh;
+  height: 6.09vh;
+  font-size: 24px;
+  width: 370px;
 }
 
 .title-input {
@@ -116,15 +139,7 @@ font-size: 15px;
   margin-top: 3.04vh;
   font-weight: 600;
 }
-.save-button {
-  background-color: #353567;
-  color:#E9E7F3;
-  margin-top: 3.04vh;
-  margin-bottom: 3.04vh;
-  height: 6.09vh;
-  font-size: 24px;
-  width: 370px;
-}
+
 
 .inputs-holder {
   margin-top: 3.04vh;
@@ -304,8 +319,8 @@ border: none;
   height: 170px;
 }
 .idea-cards {
-  display: flex;
-  justify-content: center;
+  display: grid;
+
 }
 .mini-card {
   width: 100%
@@ -355,6 +370,23 @@ position: absolute;
 
 }
 
+.disabled-button {
+  background-color: lightslategray;
+  margin-top: 3.04vh;
+  margin-bottom: 3.04vh;
+  height: 6.09vh;
+  font-size: 24px;
+  width: 370px;
+}
+.save-button {
+  background-color: #353567;
+  color:#E9E7F3;
+  margin-top: 3.04vh;
+  margin-bottom: 3.04vh;
+  height: 6.09vh;
+  font-size: 24px;
+  width: 370px;
+}
 
 /* .ideas { */
   /* opacity: 0; */
