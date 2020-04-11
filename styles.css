@@ -184,6 +184,7 @@ font-size: 15px;
   margin: 10px;
   width: 195px;
   height: 270px;
+  display: grid;
 }
 
 .idea-card-top {
@@ -199,28 +200,38 @@ font-size: 15px;
   margin-bottom: 1.94vh;
   margin-right: 20px;
   margin-left: 20px;
-
 }
 
 .idea-card-title {
+  bottom: 30px;
   font-weight: 800;
   font-size: 17px;
   margin-top: 2.23vh;
   margin-bottom: 2.23vh;
+  position:  relative;
+  padding-left: 20px;
 }
 
 .idea-card-body {
   font-weight: 300;
+  position: relative;
+  padding-left: 20px;
+  bottom: 50px;
 }
 .idea-card-top {
   width: 100%;
   top: 0px;
+  height: 40px;
 }
 .idea-card-bottom {
   background-color: #5356A4;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
+  bottom: 0px;
+  position: relative;
+  height: 40px;
+  top: 31px;
 }
 
 .comment-idea-img {
@@ -320,10 +331,10 @@ border: none;
 }
 .idea-cards {
   display: grid;
-
+  grid-template-columns: 1fr;
 }
 .mini-card {
-  width: 100%
+  width: 100%;
 }
 .purple-3 {
 z-index: 1;
