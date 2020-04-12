@@ -245,13 +245,13 @@ font-size: 15px;
   font-weight: bold;
 }
 
-.star-active-button, .delete-button, .comment-button {
+.star-button, .delete-button, .comment-button {
   padding: 3.75px;
   background: transparent;
   border: none;
 }
 
-.star-active-img {
+.star-img {
   height: 25px;
   width: 25px;
 }
