@@ -397,7 +397,13 @@ position: absolute;
   height: 6.09vh;
   font-size: 24px;
   width: 370px;
+  cursor: pointer;
 }
+
+
+
+
+
 
 /* .ideas { */
   /* opacity: 0; */
