@@ -9,6 +9,9 @@ var bodyInput = document.querySelector('.body-input')
 var saveButton = document.querySelector('.save-button')
 var ideaCards = document.querySelector('.idea-cards')
 var deleteButton = document.querySelector('.delete-button')
+
+
+
 var idea = new Idea()
 
 hamButton.addEventListener("click", toggleButton)
@@ -24,6 +27,7 @@ ideaCards.addEventListener('click', function(event){
   var card = event.target.parentNode.parentNode.parentNode
   var cardClass = event.target.classList
   deleteIdea(card, cardClass.value)
+  starToggle(card, cardClass.value)
 })
 
 var savedIdeas = []
@@ -31,8 +35,8 @@ document.onload = checkInputs()
 
 function deleteIdea(card, cardClass){
   for (var i = 0; i < savedIdeas.length; i++) {
-    if(savedIdeas[i].id == card.id) {
-      if(cardClass == 'delete-idea-img'){
+    if (savedIdeas[i].id == card.id) {
+      if (cardClass == 'delete-idea-img'){
         savedIdeas[i].deleteFromStorage()
         card.remove()
         savedIdeas.splice(i, 1)
@@ -40,6 +44,7 @@ function deleteIdea(card, cardClass){
     }
   }
 }
+
 function toggleButton(){
   hamButton.classList.toggle('active')
   if (hamButton.classList.contains('active')){
@@ -74,38 +79,38 @@ function checkInputs() {
   saveButton.classList.add('disabled-button')
   saveButton.classList.remove('save-button')
   saveButton.disabled = true
-} else if (titleInput.value !== '' || bodyInput.value !== ''){
-  saveButton.classList.remove('disabled-button')
-  saveButton.classList.add('save-button')
-  saveButton.disabled = false
+  } else if (titleInput.value !== '' || bodyInput.value !== ''){
+    saveButton.classList.remove('disabled-button')
+    saveButton.classList.add('save-button')
+    saveButton.disabled = false
 }
 }
 
 function saveToIdeasArr() {
   if(titleInput.value !== '' || bodyInput.value !== ''){
-  var title = titleInput.value
-  var body = bodyInput.value
-  var fullCard = new Idea(title, body)
-  savedIdeas.push(fullCard)
-  fullCard.saveToStorage()
-  titleInput.value = bodyInput.value = ''
-  } else {
-  checkInputs()
+    var title = titleInput.value
+    var body = bodyInput.value
+    var fullCard = new Idea(title, body)
+    savedIdeas.push(fullCard)
+    fullCard.saveToStorage()
+    titleInput.value = bodyInput.value = ''
+    } else {
+    checkInputs()
+    }
   }
-}
 
 function displayCards() {
-var miniCards = document.querySelectorAll('.mini-card')
-for (var i = 0; i < miniCards.length; i++) {
-  miniCards[i].remove()
-}
+  var miniCards = document.querySelectorAll('.mini-card')
+  for (var i = 0; i < miniCards.length; i++) {
+    miniCards[i].remove()
+  }
   for (var i = 0; i < savedIdeas.length; i++) {
     var newCard = savedIdeas[i]
     var theStuff = `
     <section class="mini-card" id=${newCard.id}>
       <section class="idea-card-top">
-        <button type="button" name="star-active" class="star-active-button">
-          <img src="Assets/star-active.svg" class="star-active-img"/>
+        <button type="button" name="star" class="star-button">
+          <img src="Assets/star.svg" class="star-img"/>
         </button>
         <button type="button" name="delete" class="delete-button">
           <img src="Assets/delete.svg" class="delete-idea-img"/>
@@ -121,6 +126,21 @@ for (var i = 0; i < miniCards.length; i++) {
       </section>
     </section>
   `
-ideaCards.insertAdjacentHTML('afterbegin', theStuff)
+  ideaCards.insertAdjacentHTML('afterbegin', theStuff)
   }
+}
+
+function starToggle(){
+if(event.target.classList.contains('star-img')){
+  event.target.classList.toggle('active')
+  if(event.target.classList.contains('active')){
+    event.target.src = 'Assets/star-active.svg'
+    console.log(event.target.src)
+  } else {
+    event.target.src = 'Assets/star.svg'
+  }
+
+
+}
+
 }
