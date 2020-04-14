@@ -11,7 +11,6 @@ var ideaCards = document.querySelector('.idea-cards')
 var deleteButton = document.querySelector('.delete-button')
 
 
-
 var idea = new Idea()
 
 hamButton.addEventListener("click", toggleButton)
@@ -32,6 +31,7 @@ ideaCards.addEventListener('click', function(event){
 
 var savedIdeas = []
 document.onload = checkInputs()
+document.onload = retrieveFromStorage()
 
 function deleteIdea(card, cardClass){
   for (var i = 0; i < savedIdeas.length; i++) {
@@ -134,13 +134,42 @@ function starToggle(){
 if(event.target.classList.contains('star-img')){
   event.target.classList.toggle('active')
   if(event.target.classList.contains('active')){
+    console.log(event.target.parentNode.parentNode.parentNode.id)
     event.target.src = 'Assets/star-active.svg'
-    console.log(event.target.src)
+    makeFavorite()
   } else {
     event.target.src = 'Assets/star.svg'
   }
-
-
+}
 }
 
+function makeFavorite() {
+  for(var i = 0; i < savedIdeas.length; i++){
+  var starId = event.target.parentNode.parentNode.parentNode.id
+  console.log(starId)
+    if (starId == savedIdeas[i].id) {
+      console.log(event.target.src) 
+      event.target.src = 'Assets/star-active.svg'
+      savedIdeas[i].updateStar() 
+      
+    }
+  }  
+}
+
+function retrieveFromStorage() {
+  for(var i = 0; i < localStorage.length; i++) {
+  var retrievedIdea = localStorage.getItem(localStorage.key(i))
+  var parsedIdea = JSON.parse(retrievedIdea)
+  //console.log(parsedIdea.title)
+  reinst(parsedIdea)
+}
+}
+
+function reinst(parsedIdea) {
+  //console.log(parsedIdea)
+  var reinstIdea = new Idea(parsedIdea.title, parsedIdea.body, parsedIdea.id)
+  //console.log(reinstIdea)
+  savedIdeas.push(reinstIdea)
+  //reinstIdeas.push(reinstIdea)
+  displayCards()
 }
