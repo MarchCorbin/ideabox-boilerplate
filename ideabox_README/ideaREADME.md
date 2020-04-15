@@ -1,15 +1,22 @@
-# IDEABOX Group Projec
-
+# IDEABOX Group Project
+<!--  
+  * EXAMPLE LINK:
+<img width="545" alt="screenshot of Desktop Layout View after Iteration 0 complete" src="">
+width= 1283 (desktop big)
+width= 545 (desktop small)
+width= 350 (mobile)
+[(link)](https://github.com)
+-->
 
 ![](https://ca.slack-edge.com/T029P2S9M-U03BVJDPC-gc7c991b22b5-72) ![](https://ca.slack-edge.com/T029P2S9M-UQRM2Q4AH-dbf2840cc06e-72) ![](https://ca.slack-edge.com/T029P2S9M-UTPTTDE84-13b671276cf8-72)  <br> 
 
 * project manager: __Will__ [(github)](https://github.com/turingschool-examples)
-* contributer: __Colin__ [(github)](https://github.com/MarchCorbin)
+* contributer: __Corbin__ [(github)](https://github.com/MarchCorbin)
 * contributer: __Sue__ [(github)](https://github.com/GreenbergKU)
 
 <!-- 
 (will) 
-(colin)
+(corbin)
 (sue) 
   -[] Overview of project and goals
   -[] Overview of technologies used, challenges, and wins, any other reflections
@@ -65,13 +72,19 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 ##### `  Pull Request Template: Customized to include only relevant features pertaining to this project  `
 
-
-  ![This is the customized Pull Request Template :](https://user-images.githubusercontent.com/10098034/78870178-405e5200-7a35-11ea-91d9-7bd406f5ac05.png) <br>
+  ![This is the customized Pull Request Template :](https://user-images.githubusercontent.com/10098034/79298038-22fa0f80-7e9d-11ea-8475-774b4ab71b54.png) <br>
 
 
 ##### `  Desktop Layout View: after completion of Iteration 0   `
 
-  ![Desktop Layout View: after completion of Iteration 0](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg) <br>
+<img width="1283" alt="screenshot of Desktop Layout View after Iteration 0 complete" src="https://user-images.githubusercontent.com/10098034/79301186-25149c00-7ea6-11ea-83da-ebffbc945a6b.png">
+
+<!--
+### Iteration 0 Pics
+![ideabox_PR_template](https://user-images.githubusercontent.com/10098034/79298038-22fa0f80-7e9d-11ea-8475-774b4ab71b54.png)
+<img width="545" alt="DesktopLayout1-small-Iter0-2020-04-09_125AM" src="https://user-images.githubusercontent.com/10098034/79301184-247c0580-7ea6-11ea-87d6-61ffdfb527dc.png">
+<img width="1283" alt="DesktopLayout2-big-Iter0-20200409_135AM" src="https://user-images.githubusercontent.com/10098034/79301186-25149c00-7ea6-11ea-83da-ebffbc945a6b.png">
+-->
  
 ### ITERATION 1: MOBILE LAYOUT
 #### Brief Synopsis of Objectives 
@@ -85,25 +98,41 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 #### SCREENSHOTS
 <!--  
   * EXAMPLE LINK:
+<img width="545" alt="screenshot of Desktop Layout View after Iteration 0 complete" src="">
+width= 1283 (desktop big)
+width= 545 (desktop small)
+width= 350 (mobile)
 [(link)](https://github.com)
-  * EXAMPLE IMG:
-##### `  Pull Request Template: Customized to include only relevant features pertaining to this project  `
-![Desktop Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg)
+-->
+##### `  Mobile layout view with Iteration 1 complete  `
+<img width="350" alt="Mobile layout view with Iteration 1 complete" src="https://user-images.githubusercontent.com/10098034/79301108-e383f100-7ea5-11ea-849f-996531f06cd1.png">
+
+<!--
 ##### `  Pull Request Template: Customized to include only relevant features pertaining to this project  `
 ![Desktop Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg)
 ##### `  Pull Request Template: Customized to include only relevant features pertaining to this project  `
 ![Desktop Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg)
 -->
-
+<!--
+### Iteration 1 Pics
+<img width="252" alt="Mobile_Layout_card_Example-20200411_333AM" src="https://user-images.githubusercontent.com/10098034/79301108-e383f100-7ea5-11ea-849f-996531f06cd1.png">
+<img width="227" alt="Mobile_Layout_Iter1-20200411_332AM" src="https://user-images.githubusercontent.com/10098034/79301110-e41c8780-7ea5-11ea-97e6-94634dc2ef94.png">
+<img width="222" alt="Mobile_Layout_nav_menu_Iter1-20200411_337AM" src="https://user-images.githubusercontent.com/10098034/79301111-e4b51e00-7ea5-11ea-8b42-89fe7493c29b.png">
+-->
 ### ITERATION 2:
 
 #### Brief Synopsis of Objectives
 #### Summary of Progress
 #### SCREENSHOTS
+
+<!--
+### Iteration 2 Pics
+<img width="549" alt="Desktop_View_clickable_save_button-Iter2-20200412_143AM" src="https://user-images.githubusercontent.com/10098034/79301124-ee3e8600-7ea5-11ea-8c3e-b89d66f934d3.png">
+<img width="654" alt="Desktop_View_Grey_Save_Button-Iter2-202-0412_140AM" src="https://user-images.githubusercontent.com/10098034/79301126-eed71c80-7ea5-11ea-939c-23d0df8ea560.png">
+<img width="446" alt="Mobile_View_1st_Card_grey_Save-Iter2-2020-04-12_150AM" src="https://user-images.githubusercontent.com/10098034/79301128-eed71c80-7ea5-11ea-8eb5-61b7bde76b84.png">
+<img width="450" alt="Mobile_view_1st_card-Iter2_2020-04-12_147AM" src="https://user-images.githubusercontent.com/10098034/79301129-ef6fb300-7ea5-11ea-8646-972c7798cc6b.png">
+-->
 <!--  
-  * EXAMPLE LINK:
-[(link)](https://github.com)
-  * EXAMPLE IMG:
 ##### `  Pull Request Template: Customized to include only relevant features pertaining to this project  `
 ![Desktop Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg)
 ##### `  Pull Request Template: Customized to include only relevant features pertaining to this project  `
