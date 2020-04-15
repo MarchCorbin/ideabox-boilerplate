@@ -10,23 +10,55 @@ var saveButton = document.querySelector('.save-button')
 var ideaCards = document.querySelector('.idea-cards')
 var deleteButton = document.querySelector('.delete-button')
 var ideasButton = document.querySelector('.ideas-btn')
-
+var searchInput = document.querySelector('.search-input')
 
 var idea = new Idea()
+
+
+searchInput.addEventListener('keyup', search)
+//searchInput.addEventListener()
+
+
+
+function search() {
+  savedIdeas = []
+  retrieveFromStorage()
+  var casedSearch = searchInput.value.toLowerCase()
+  var filteredSearch = savedIdeas.filter(function(idea){
+    return (idea.title.toLowerCase().includes(casedSearch)) || (idea.body.toLowerCase().includes(casedSearch))
+  })
+  savedIdeas = filteredSearch
+  displayCards()
+}
+//flteredSearch = savedIdeas.filter((idea){
+//     return 
+// })
+//})
+//console.log(idea) 
+//let newArray = arr.filter(callback(element[, index, [array]])[, thisArg])
+//console.log(event.target.value.toLowerCase())
+
+//filterSearch()
+//saveToSearchArr(){
+  //saveToSearchArr = savedIdeas
+//}
+//displayCards()
+
 
 hamButton.addEventListener("click", toggleButton)
 saveButton.addEventListener('click', function(){
   saveToIdeasArr()
   displayCards()
 })
+
 titleInput.addEventListener('input', checkInputs)
 bodyInput.addEventListener('input', checkInputs)
 ideasButton.addEventListener('click',function(){
 showStarredIdeas()
 toggleShowDisplayed()
 })
-ideaCards.addEventListener('click', function(event){
 
+ideaCards.addEventListener('click', function(event){
   // use this for edit functionality
   var card = event.target.parentNode.parentNode.parentNode
   var cardClass = event.target.classList

@@ -15,6 +15,26 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 * Incorporate & iterate over arrays in order to filter what is being displayed
 * Craft code with clean style, using small functions that show trends toward DRYness and SRP
 
+For this project, we’ll be increasingly thinking about the “data model” and “DOM model” as separate entities. We’ll be using:
+JSON and `localStorage` to persist data on page reload.
+vanilla JavaScript to manage client-side interactions.
+Your entire application will consist of one HTML page or template. You will have two JavaScript files, for now:
+1. An `idea.js` file that contains an `Idea` class.
+  * `Idea` methods must include, but are not limited to:
+    1. `constructor`
+    2. `saveToStorage` (should only have one job which is to save the instance to storage)
+    3. `deleteFromStorage`
+    4. `updateIdea` (should be able to update the idea’s title, body, or starred state)
+2. A `main.js` file that contains all DOM related JavaScript.
+NOTE: The idea.js file  must be the first script in your HTML so that your main.js file has access to your Idea class.
+Data Model
+ An idea has an id, title, body, and star.
+The id should be a unique identifier. (Note: generating a random number does NOT guarantee it will be unique)
+title and body are strings
+star is a boolean
+Each idea should be created as an object instance of the Idea class. Once an idea object is created, all that data can be used to update the DOM. That object should also be added to a list of all the ideas your application currently has. This should probably be a global variable in your main.js.
+
+
 ## Setup
 
 - Complete a DTR
@@ -53,6 +73,67 @@ Full mobile layout with open navigation:
 ### Iteration 2 and beyond
 
 After you have completed Iterations 0-1, your Project Manager will provide you with the next iteration.
+
+### Iteration 2 - Adding Ideas
+As a user,
+- When I click “Save”,
+- If I entered information in both the “Title” and “Body” input fields,
+- I should see a new idea card with the provided title and body appear in the idea list
+As a user,
+- When I click “Save”,
+- If I entered information in both the “Title” and “Body” input fields,
+- I should see the “Title” and “Body” input fields clear out
+As a user,
+- When I look at the “Save” button,
+- When either the “Title” or “Body” inputs are empty,
+- I should notice that the “Save” button is disabled because it is a lighter color and the cursor is not a pointer when I hover over it
+As a user,
+- When I click “Save”,
+- And a new card is successfully created,
+- I should NOT see the page reload
+
+### Iteration 3 - Favoriting & Deleting Ideas
+As a user,
+- When I click the "Delete" button on an idea card,
+- The card should be permanently removed from my view
+As a user,
+- When I click the "Star" button on an idea card,
+- When the button was an outline of a star (not favorited),
+- The button should now be a filled in star (favorited)
+As a user,
+- When I click the "Star" button on an idea card,
+- When the button was a filled in star (favorited),
+- The button should now be an outline of a star (not favorited)
+As a user,
+- When I delete or favorite any card,
+- I should _not_ see the page reload
+
+### Iteration 4 - Local Storage & Filtering
+As a user,
+- When I create one idea successfully, then refresh the page,
+- The idea card is still in the idea list
+As a user,
+- When I create two cards successfully, delete one, then refresh the page,
+- One idea card is still in the idea list (the one I did not delete)
+As a user,
+- When I favorite an idea card, then refresh the page,
+- That idea card is still in the "favorite" state with the filled in star icon
+As a user,
+- When I click "Show Starred Ideas"
+- I see only card that are favorited
+As a user,
+- When I click "Show Starred Ideas"
+- I see the text on that button has changed to "Show All Ideas"
+As a user,
+- When I click "Show Starred Ideas"
+- Then I click what is now "Show All Ideas"
+- I see all idea, favorited or not
+As a user,
+- When a type a letter or phrase into the search bar
+- I now only see the cards that include the letter/phrase in the title or body
+As a user,
+- When I backspace and delete something from the search bar, so that it's empty
+- I see all cards since no search criteria is being provided
 
 ## Rubric
 
