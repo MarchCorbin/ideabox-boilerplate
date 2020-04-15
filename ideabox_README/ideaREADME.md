@@ -104,15 +104,15 @@ width= 545 (desktop small)
 width= 350 (mobile)
 [(link)](https://github.com)
 -->
-##### `  Mobile layout view with Iteration 1 complete  `
-<img width="350" alt="Mobile layout view with Iteration 1 complete" src="https://user-images.githubusercontent.com/10098034/79301108-e383f100-7ea5-11ea-849f-996531f06cd1.png">
+<!-- ##### `  Mobile layout view with Iteration 1 complete  `
+<img width="350" alt="Mobile_Layout_Iter1-20200411_332AM" src="https://user-images.githubusercontent.com/10098034/79301110-e41c8780-7ea5-11ea-97e6-94634dc2ef94.png"> -->
 
-<!--
-##### `  Pull Request Template: Customized to include only relevant features pertaining to this project  `
-![Desktop Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg)
-##### `  Pull Request Template: Customized to include only relevant features pertaining to this project  `
-![Desktop Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg)
--->
+##### `  Mobile layout view with ideaCard displayed  `
+<img width="350" alt="Mobile_Layout_card_Example-20200411_333AM" src="https://user-images.githubusercontent.com/10098034/79301108-e383f100-7ea5-11ea-849f-996531f06cd1.png">
+
+##### `  Mobile layout view while navigation menu expanded  `
+<img width="350" alt="Mobile_Layout_nav_menu_Iter1-20200411_337AM" src="https://user-images.githubusercontent.com/10098034/79301111-e4b51e00-7ea5-11ea-8b42-89fe7493c29b.png">
+
 <!--
 ### Iteration 1 Pics
 <img width="252" alt="Mobile_Layout_card_Example-20200411_333AM" src="https://user-images.githubusercontent.com/10098034/79301108-e383f100-7ea5-11ea-849f-996531f06cd1.png">
