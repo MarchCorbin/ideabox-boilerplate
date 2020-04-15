@@ -1,8 +1,8 @@
 class Idea {
-  constructor(title, body, id) {
+  constructor(title, body, star, id) {
     this.title = title
     this.body = body
-    this.star = false
+    this.star = star
     this.id = id || Date.now()
   }
 
@@ -15,14 +15,19 @@ class Idea {
 
   deleteFromStorage(){
     localStorage.removeItem(`storedIdea${this.id}`)
-     
+
   }
 
   updateStar() {
-    this.star = true
-    console.log(this)
+    if(event.target.classList.contains('active')){
+      event.target.src = 'Assets/star-active.svg'
+      this.star = true
+      this.saveToStorage()
+    } else if(!event.target.classList.contains('active')) {
+    this.star = false
+    event.target.src = 'Assets/star.svg'
     this.saveToStorage()
-    
+  }
   }
 
 }

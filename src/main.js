@@ -9,6 +9,7 @@ var bodyInput = document.querySelector('.body-input')
 var saveButton = document.querySelector('.save-button')
 var ideaCards = document.querySelector('.idea-cards')
 var deleteButton = document.querySelector('.delete-button')
+var ideasButton = document.querySelector('.ideas-btn')
 
 
 var idea = new Idea()
@@ -20,6 +21,10 @@ saveButton.addEventListener('click', function(){
 })
 titleInput.addEventListener('input', checkInputs)
 bodyInput.addEventListener('input', checkInputs)
+ideasButton.addEventListener('click',function(){
+showStarredIdeas()
+toggleShowDisplayed()
+})
 ideaCards.addEventListener('click', function(event){
 
   // use this for edit functionality
@@ -30,8 +35,8 @@ ideaCards.addEventListener('click', function(event){
 })
 
 var savedIdeas = []
-document.onload = checkInputs()
 document.onload = retrieveFromStorage()
+document.onload = checkInputs()
 
 function deleteIdea(card, cardClass){
   for (var i = 0; i < savedIdeas.length; i++) {
@@ -90,7 +95,8 @@ function saveToIdeasArr() {
   if(titleInput.value !== '' || bodyInput.value !== ''){
     var title = titleInput.value
     var body = bodyInput.value
-    var fullCard = new Idea(title, body)
+    var star = false
+    var fullCard = new Idea(title, body, star)
     savedIdeas.push(fullCard)
     fullCard.saveToStorage()
     titleInput.value = bodyInput.value = ''
@@ -106,11 +112,17 @@ function displayCards() {
   }
   for (var i = 0; i < savedIdeas.length; i++) {
     var newCard = savedIdeas[i]
-    var theStuff = `
+    var starImage
+    if(newCard.star == true){
+      starImage = 'Assets/star-active.svg'
+    } else {
+      starImage = 'Assets/star.svg'
+}
+    var theStuffs = `
     <section class="mini-card" id=${newCard.id}>
       <section class="idea-card-top">
         <button type="button" name="star" class="star-button">
-          <img src="Assets/star.svg" class="star-img"/>
+          <img src=${starImage} class="star-img "/>
         </button>
         <button type="button" name="delete" class="delete-button">
           <img src="Assets/delete.svg" class="delete-idea-img"/>
@@ -126,50 +138,58 @@ function displayCards() {
       </section>
     </section>
   `
-  ideaCards.insertAdjacentHTML('afterbegin', theStuff)
-  }
+  ideaCards.insertAdjacentHTML('afterbegin', theStuffs)
+
+}
 }
 
 function starToggle(){
 if(event.target.classList.contains('star-img')){
   event.target.classList.toggle('active')
-  if(event.target.classList.contains('active')){
-    console.log(event.target.parentNode.parentNode.parentNode.id)
-    event.target.src = 'Assets/star-active.svg'
     makeFavorite()
-  } else {
-    event.target.src = 'Assets/star.svg'
   }
 }
-}
+
 
 function makeFavorite() {
   for(var i = 0; i < savedIdeas.length; i++){
   var starId = event.target.parentNode.parentNode.parentNode.id
-  console.log(starId)
     if (starId == savedIdeas[i].id) {
-      console.log(event.target.src) 
-      event.target.src = 'Assets/star-active.svg'
-      savedIdeas[i].updateStar() 
-      
+      savedIdeas[i].updateStar()
     }
-  }  
+  }
 }
 
 function retrieveFromStorage() {
   for(var i = 0; i < localStorage.length; i++) {
   var retrievedIdea = localStorage.getItem(localStorage.key(i))
   var parsedIdea = JSON.parse(retrievedIdea)
-  //console.log(parsedIdea.title)
   reinst(parsedIdea)
 }
 }
 
 function reinst(parsedIdea) {
-  //console.log(parsedIdea)
-  var reinstIdea = new Idea(parsedIdea.title, parsedIdea.body, parsedIdea.id)
-  //console.log(reinstIdea)
+  var reinstIdea = new Idea(parsedIdea.title, parsedIdea.body, parsedIdea.star, parsedIdea.id)
   savedIdeas.push(reinstIdea)
-  //reinstIdeas.push(reinstIdea)
   displayCards()
+}
+
+function toggleShowDisplayed(){
+ideasButton.classList.toggle('active')
+if(ideasButton.classList.contains('active')){
+  ideasButton.innerText = 'Show All Ideas'
+} else {
+  ideasButton.innerText = 'Show Starred Ideas'
+  savedIdeas = []
+  retrieveFromStorage()
+}
+}
+
+function showStarredIdeas(){
+  for (var i = 0; i < savedIdeas.length; i++) {
+    if (savedIdeas[i].star == false){
+      savedIdeas.splice(i,1)
+      displayCards()
+    }
+  }
 }
