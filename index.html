@@ -1,45 +1,41 @@
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-  </head>
-  <body class="purple-1">
-    <section class="menu purple-4">
-      <button type="button" name="burger button" class="ham-button hidden"><img src="Assets/menu.svg" class="ham-hide"/></button>
-      <h1 class="header-text">IdeaBox</h1>
-
-      <section class="left-side-border">
-      <h3 class="left-side-text">Filter Starred Ideas</h3>
-      <button class="ideas-btn" type="button" name="star ideas btn">Show Starred Ideas</button>
-    </section>
-  </section>
-
-
-    <main class="ideas">
-
-      <section class="idea-form purple-2">
-        <section class="inputs-holder">
-          <p class="form-text">Title</p>
-        <input type="text" name="Title" class="title-input">
-        <p class="form-text2">Body</p>
-        <textarea name="body input" rows="8" cols="80" class="body-input"></textarea>
-        <button type="button" name="Save" class="save-button">Save</button>
-<section class='search-section'>
-<button type="button" name="magnify glass" class="search-btn"><img src="Assets/search.svg" class="mag-glass"/></button>
-<input type="input" name="search" class="search-input" placeholder="Search ideas">
-</section>
-</section>
-</section>
-
-        <article class="starred-cards-grid">
-          <section class="idea-cards">
-        
-      </section>
-      </article>
-    </main>
-    <script src="./src/idea.js"></script>
-    <script src="./src/main.js"></script>
-
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="./styles.css">
+      <title>IdeaBox</title>
+    </head>
+    <body class="purple-1">
+            <section class="menu purple-4">
+                  <button type="button" name="burger button" class="ham-button hidden"><img src="Assets/menu.svg" class="ham-hide"/></button>
+                  <h1 class="header-text">IdeaBox</h1>
+              <section class="left-side-border">
+                  <h3 class="left-side-text">Filter Starred Ideas</h3>
+                  <button class="ideas-btn" type="button" name="star ideas btn">Show Starred Ideas</button>
+              </section>
+            </section>
+        <main class="ideas">
+            <section class="idea-form purple-2">
+                <section class="inputs-holder">
+                    <p class="form-text">Title</p>
+                    <input type="text" name="Title" class="title-input">
+                    <p class="form-text2">Body</p>
+                    <textarea name="body input" rows="8" cols="80" class="body-input"></textarea>
+                    <button type="button" name="Save" class="save-button">Save</button>
+                    <section class="search-section">
+                      <button type="button" name="magnify glass" class="search-btn"><img src="Assets/search.svg" class="mag-glass"/></button>
+                      <input type="input" name="search" class="search-input" placeholder="Search ideas">
+                    </section>
+                </section>
+            </section>
+                <article class="starred-cards-grid">
+                    <section class="idea-cards">       
+                    </section>
+                </article>
+        </main>
+        <script src="./src/idea.js"></script>
+        <script src="./src/main.js"></script>
+    </body>
 </html>
