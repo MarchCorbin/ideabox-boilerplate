@@ -186,19 +186,19 @@ ady gotten delete functionality to work in the process of writing for local stor
 #### SCREENSHOTS
 
 
-##### `  desktopViewFavStarChanged-Iter3-20200415_206 AM  `
+##### `  Desktop View  `
 
 
 ![](https://user-images.githubusercontent.com/10098034/79314779-64031b80-7ebf-11ea-8eb8-d95089c582d8.png)
 
 
-##### `  desktopViewFavStar-Iter3-2020-04-15 at 2 05 47 AM  `
+##### `  Desktop View  `
 
 
 ![](https://user-images.githubusercontent.com/10098034/79314781-649bb200-7ebf-11ea-9e53-c7baddb9dae3.png)
 
 
-##### `  mobileViewFavStar-Iter3-2020-04-15 at 1 50 48 AM  `
+##### `  Mobile View  `
 
 
 ![](https://user-images.githubusercontent.com/10098034/79314783-65344880-7ebf-11ea-8404-70934d85ab77.png)
